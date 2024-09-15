@@ -1,12 +1,18 @@
 package utils;
 
+import java.lang.reflect.Array;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Random;
 
 public class Helper {
 
-    public static String pickRandomItem() {
-        return "rock";
+    public static Object pickRandomItem(Object arrObject) {
+        int arrLen = Array.getLength(arrObject);
+        Random random = new Random();
+        int randomIndex = random.nextInt(arrLen);
+
+        return Array.get(arrObject, randomIndex);
     }
 
     public static Map<String, String> getRoundResult(String humanPlayerSelection, String comPlayerSelection) {
