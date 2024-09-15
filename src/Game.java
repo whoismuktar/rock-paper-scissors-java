@@ -1,5 +1,5 @@
-
 import java.util.Scanner;
+import utils.Helper;
 
 public class Game {
 
@@ -18,6 +18,8 @@ public class Game {
         Scanner scanner = new Scanner(System.in);
         System.out.println("What is your pick? (rock/paper/scissors)");
         humanPlayerSelection = scanner.nextLine();
+
+        comPlayerSelection = Helper.pickRandomItem();
 
         roundResult();
     }
