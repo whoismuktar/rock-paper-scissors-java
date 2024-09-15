@@ -16,7 +16,7 @@ public class Helper {
     }
 
     public static Map<String, String> getRoundResult(String humanPlayerSelection, String comPlayerSelection) {
-        System.out.println("Comparing...: " + humanPlayerSelection + "and" + comPlayerSelection);
+        // System.out.println("Comparing...: " + humanPlayerSelection + " and " + comPlayerSelection);
 
         Map<String, String> result = new HashMap<>();
         if (humanPlayerSelection.equals(comPlayerSelection)) {
