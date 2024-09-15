@@ -29,7 +29,7 @@ public class Helper {
         
         if (humanPlayerSelection.equals("rock")) {
             if (comPlayerSelection.equals("paper")) {
-                String description = "You lose!" + comPlayerSelection + "won";
+                String description = "You lose! " + comPlayerSelection + "won";
                 result.put("description", description);
                 result.put("winner", "computer");
 
@@ -37,7 +37,7 @@ public class Helper {
             }
 
             if (comPlayerSelection.equals("scissors")) {
-                String description = "You win!" + humanPlayerSelection + "won";
+                String description = "You win! " + humanPlayerSelection + "won";
                 result.put("description", description);
                 result.put("winner", "human");
 
@@ -47,14 +47,14 @@ public class Helper {
 
         if (humanPlayerSelection.equals("paper")) {
             if (comPlayerSelection.equals("scissors")) {
-                String description = "You lose!" + comPlayerSelection + "won";
+                String description = "You lose! " + comPlayerSelection + "won";
                 result.put("description", description);
                 result.put("winner", "computer");
 
                 return result;
             }
             if (comPlayerSelection.equals("rock")) {
-                String description = "You win!" + humanPlayerSelection + "won";
+                String description = "You win! " + humanPlayerSelection + "won";
                 result.put("description", description);
                 result.put("winner", "human");
 
@@ -64,14 +64,14 @@ public class Helper {
 
         if (humanPlayerSelection.equals("scissors")) {
             if (comPlayerSelection.equals("rock")) {
-                String description = "You lose!" + comPlayerSelection + "won";
+                String description = "You lose! " + comPlayerSelection + "won";
                 result.put("description", description);
                 result.put("winner", "computer");
 
                 return result;
             }
             if (comPlayerSelection.equals("paper")) {
-                String description = "You win!" + humanPlayerSelection + "won";
+                String description = "You win! " + humanPlayerSelection + "won";
                 result.put("description", description);
                 result.put("winner", "human");
 

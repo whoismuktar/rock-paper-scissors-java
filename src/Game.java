@@ -1,4 +1,5 @@
 
+import java.util.Arrays;
 import java.util.Map;
 import java.util.Scanner;
 import utils.Helper;
@@ -20,11 +21,17 @@ public class Game {
         Scanner scanner = new Scanner(System.in);
         System.out.println("What is your pick? (rock/paper/scissors)");
         humanPlayerSelection = scanner.nextLine();
+        scanner.close();
 
-        comPlayerSelection = (String) Helper.pickRandomItem(playerOptions);
+        if (!Arrays.asList(playerOptions).contains(humanPlayerSelection)) {
+            System.out.println("You entered an invalid option");
+        } else {
 
-        Map<String, String> result = Helper.getRoundResult(humanPlayerSelection, comPlayerSelection);
+            comPlayerSelection = (String) Helper.pickRandomItem(playerOptions);
 
-        System.out.println(result.get("description"));
+            Map<String, String> result = Helper.getRoundResult(humanPlayerSelection, comPlayerSelection);
+
+            System.out.println(result.get("description"));
+        }
     }
 }
