@@ -1,9 +1,11 @@
+
+import java.util.Map;
 import java.util.Scanner;
 import utils.Helper;
 
 public class Game {
 
-    String[] playerOptions = {"rock", "paper", "scissors"};
+    static String[] playerOptions = {"rock", "paper", "scissors"};
     static String humanPlayerSelection;
     static String comPlayerSelection;
 
@@ -19,8 +21,10 @@ public class Game {
         System.out.println("What is your pick? (rock/paper/scissors)");
         humanPlayerSelection = scanner.nextLine();
 
-        comPlayerSelection = Helper.pickRandomItem();
+        comPlayerSelection = (String) Helper.pickRandomItem(playerOptions);
 
-        roundResult();
+        Map<String, String> result = Helper.getRoundResult(humanPlayerSelection, comPlayerSelection);
+
+        System.out.println(result.get("description"));
     }
 }
